@@ -69,14 +69,20 @@ int play(char name[]){
     int tie = 0, win = 0, lose = 0, round = 1;
     do{
         printf("\n\n********************ROUND %d********************\n\n",round);
-        do{
+        printf("user left hand (r,p,s)>> ");
+        scanf(" %c",&usr_l);
+        while(usr_l != 'r' && usr_l != 'p' && usr_l != 's'){
+            printf("Invalid Input ( r for rock, p for paper, s for scissor )\n");
             printf("user left hand (r,p,s)>> ");
             scanf(" %c",&usr_l);
-        }while(usr_l != 'r' && usr_l != 'p' && usr_l != 's');
-        do{
+        }
+        printf("user right hand (r,p,s)>> ");
+        scanf(" %c",&usr_r);
+        while(usr_r != 'r' && usr_r != 'p' && usr_r != 's'){
+            printf("Invalid Input ( r for rock, p for paper, s for scissor )\n");
             printf("user right hand (r,p,s)>> ");
             scanf(" %c",&usr_r);
-        }while(usr_r != 'r' && usr_r != 'p' && usr_r != 's');
+        }
         printf("user's left hand : ");
         if(usr_l == 'r')
             printf("rock\n");
