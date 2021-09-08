@@ -130,12 +130,10 @@ int play(char name[]){
 }
 
 char comhand() {
-
     /*  1 = rock
         2 = paper
         3 = scissor
     */
-
     int com_rand, com_Left, com_Right, com_RightOut;
     char com_Hfinal;
     int i;
@@ -151,19 +149,14 @@ char comhand() {
                         com_Right = 1 + rand()%2 ;
                         if(com_Right==1){
                             printf("computer's hand : paper\n");
-                            //goto function ask player
-                            //************************************************ฝากต่อ******************************************
-                            //สุ่มใน2มือ
                             com_Hfinal = 1 + rand()%2 ;
                             switch(com_Hfinal)  {
                                 case 1:
                                     com_Hfinal = 'r';
-                                    //printf("computer chooses >> rock");
                                     return 'r';
                                 break;
                                 case 2:
                                     com_Hfinal = 'p';
-                                    //printf("computer chooses >> paper\n");
                                     return 'p';
                                 break;
                             }
@@ -177,12 +170,10 @@ char comhand() {
                             switch(com_Hfinal)  {
                                 case 1:
                                     com_Hfinal = 'r';
-                                    //printf("computer chooses >> rock\n");
                                     return 'r';
                                 break;
                                 case 2:
                                     com_Hfinal = 's';
-                                    //printf("computer chooses >> scissor\n");
                                     return 's';
                                 break;
                             }
@@ -202,12 +193,10 @@ char comhand() {
                             switch(com_Hfinal)  {
                                 case 1:
                                     com_Hfinal = 'p';
-                                    //printf("computer chooses >> paper\n");
                                     return 'p';
                                 break;
                                 case 2:
                                     com_Hfinal = 'r';
-                                    //printf("computer chooses >> rock\n");
                                     return 'r';
                                 break;
                             }
@@ -220,12 +209,10 @@ char comhand() {
                             switch(com_Hfinal)  {
                                 case 1:
                                     com_Hfinal = 'p';
-                                    //printf("computer chooses >> paper\n");
                                     return 'p';
                                 break;
                                 case 2:
                                     com_Hfinal = 's';
-                                    //printf("computer chooses >> scissor\n");
                                     return 's';
                                 break;
                             }
@@ -247,12 +234,10 @@ char comhand() {
                             switch(com_Hfinal)  {
                                 case 1:
                                     com_Hfinal = 's';
-                                    //printf("computer chooses >> scissor\n");
                                     return 's';
                                 break;
                                 case 2:
                                     com_Hfinal = 'r';
-                                    //printf("computer chooses >> rock\n");
                                     return 'r';
                                 break;
                             }
@@ -265,12 +250,10 @@ char comhand() {
                             switch(com_Hfinal)  {
                                 case 1:
                                     com_Hfinal = 's';
-                                    //printf("computer chooses >> scissor\n");
                                     return 's';
                                 break;
                                 case 2:
                                     com_Hfinal = 'p';
-                                    //printf("computer chooses >> paper\n");
                                     return 'p';
                                 break;
                             }
@@ -344,15 +327,6 @@ void writeStat(char name[],int win, int lose, int tie){
 	fprintf(stat_pointer, "\n");
 	fclose(stat_pointer);
 }
-
-/*void showStat(){
-	printf("\n");
-	char line[100];
-	FILE *stat = fopen("stat.txt","r");
-	while(fgets(line, sizeof(line), stat)){
-		printf("%s",line);
-	}
-}*/
 
 void readFile(char *FileName){
     printf("\n");
