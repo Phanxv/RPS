@@ -8,3 +8,9 @@ Username : Test001 | Summary win : 1 | lose : 0 | tie : 1 | Sun Sep 05 13:24:52 
  
 Username : test | Summary win : 0 | lose : 0 | tie : 1 | Tue Sep 07 13:01:45 2021
  
+Username : test | Summary win : 1 | lose : 2 | tie : 1 | Wed Sep 08 14:21:46 2021
+ 
+Username : test | Summary win : 0 | lose : 1 | tie : 1 | Wed Sep 08 17:54:27 2021
+ 
+Username : test | Summary win : 1 | lose : 0 | tie : 0 | Wed Sep 08 17:57:12 2021
+ 

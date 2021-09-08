@@ -1,20 +1,16 @@
-       .',,,,,,,,,,,,,,,,,,,,'.                                       .lo.                                    ,d:       
-       ;KXOxxxxxxxxxxxxxxxxkXX:             .......................   '0X;          ';.    .;.   ,;.    ';.   oWx.      
-       :X0'                'ONc            'dkkkOKXOkkkkkk0XX0kkkkl.  '0X;         .kNc    dNo  '0K;   .kX:   oWx.      
-       :X0'                .ONc             ....,0Xc......oNWx....    '0X;         .kNl    dWd  '0X;   .kN:   oWx.      
-       :X0'                .ONc                 .OX;      lNMx.       '0X;         .kNc    dWo  '0K;   .kN:   oWx.      
-       :XK:................:0Nc                 '0X:      oWMk.       '0X;         .kNc    dWo  '0X;   .kN:   oWx.      
-       ,k0kkxkxxxxxxxxxxxxxkOk,                 :XWo     .xMM0'       '0X;         .kWOlccl0Wo  '0NxcccoKN:   oWx.      
-         ....................                  .xWWO.    ,KMMNl       '0X;         .kWOolloKWo  '0NkllldXN:   oW0:,,,,. 
-  ..................................           ;K0OXo    oX0OXO'      '0X;         .kNc    dWo  '0X;   .kN:   oWXkxxxx: 
- .lkkkkkkkkkkkkkkOKKOkkkkkkkkkkkkkko.         .OK;.xKc  ,0O,.lXd.     '0X;         .kNc    dWo  '0X;   .kN:   oWk.      
-  ...............cXXc...............         .xXl  .kKl,kK;  .dXo.    '0X;         .kNc    dWo  '0X;   .kN:   oWx.      
-                 ,KX;                       'kXl.   .oKNXl    .oKx.   '0X;         .kNc    dWd  '0X;   .kN:   oWx.      
-      .:lllllllllkNNkllllllllc.            .k0c      .ONo.      cK0c. '0X;         .kWOlccl0Wo  '0NxcccoKN:   oWx.      
-      .:llllllllllllllllllldKWl             ..      .xXo.        'l:. '0X;          ;loloooll,  .:oolllloc.   oWx.      
-                           .kNl                     .:;.              '0X;                                    oWx.      
-                           .kNl                                       '0X;                                    oWx.      
-                           .kWl                                       '0X;                                    oWx.      
-                           .kNl                                       '0X;                                    oWx.      
-                            ,c.                                       .;:.                                    'c,       
-                                                                                                                        
+
+   __  ___    ___     ___   _  __                                      
+  / / | _ \  / _ \   / __| | |/ /                                      
+ | |  |   / | (_) | | (__  | ' <                                       
+ | |  |_|_\  \___/   \___| |_|\_\                                      
+  \_\                                                                  
+        ___     _     ___   ___   ___                                  
+       | _ \   /_\   | _ \ | __| | _ \                                 
+       |  _/  / _ \  |  _/ | _|  |   /                                 
+       |_|   /_/ \_\ |_|   |___| |_|_\                                 
+                                                                       
+            ___    ___   ___   ___   ___    ___    ___  __    /\   ___ 
+           / __|  / __| |_ _| / __| / __|  / _ \  | _ \ \ \  |/\| |_  )
+           \__ \ | (__   | |  \__ \ \__ \ | (_) | |   /  | |       / / 
+           |___/  \___| |___| |___/ |___/  \___/  |_|_\  | |      /___|
+                                                        /_/            

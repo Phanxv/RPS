@@ -20,47 +20,50 @@ int main(){
 }
 
 void mainMenu(char name[]){
+    system("cls");
 	int menu;
 	readFile("logo.txt");
-	printf("\n\nHello %s, Welcome to Muk-jji-ppa. please select menu by input a number of menu.",name);
+	printf("\n\nHello %s, Welcome to (ROCK PAPER SCISSOR)^2. \nplease select menu by input a number of menu.",name);
 	printf("\n\n1. Play the game\n");
 	printf("2. How to play?\n");
 	printf("3. Statatistic\n");
-	printf("4. Log out Exit\n\n");
+	printf("4. Log out & Exit\n\n");
 	printf("Select Menu >> ");
-	scanf("%d",&menu);
-	while(menu < 1 && menu > 4){
-		printf("Invalid input");
+	scanf(" %d",&menu);
+	while(menu < 1 || menu > 4){
+		printf("Invalid input\n");
+        printf("Select Menu >> ");
+	    scanf(" %d",&menu);
 	}
-	while(1){
-		switch (menu){
-			case 1:
-				play(name);
-				getch();
-				menu = 0;
-				mainMenu(name);
-				break;
-			case 2:
-				printf("Not yet available");
-				getch();
-				menu = 0;
-				mainMenu(name);
-				break;
-			case 3:
-				menu = 0;
-				printf("\n");
-                readFile("stat banner.txt");
-                readFile("stat.txt");
-                printf("Press any keys to go back to the main menu.");
-				getch();
-				mainMenu(name);
-				break;
-			case 4:
-				printf("Farewell, %s!",name);
-				getch();
-				exit(0);
-				break;
-		}
+	switch(menu){
+		case 1:
+            system("cls");
+			play(name);
+			getch();
+			//menu = 0;
+			mainMenu(name);
+			break;
+		case 2:
+			printf("Not yet available");
+			getch();
+			//menu = 0;
+			mainMenu(name);
+			break;
+		case 3:
+            system("cls");
+			//menu = 0;
+			printf("\n");
+            readFile("stat banner.txt");
+            readFile("stat.txt");
+            printf("Press any keys to go back to the main menu.");
+			getch();
+			mainMenu(name);
+			break;
+		case 4:
+			printf("Farewell, %s!",name);
+			getch();
+			exit(0);
+			break;
 	}
 }
 
@@ -108,15 +111,15 @@ int play(char name[]){
         usr_fh = usr_fd;
         result = compare(usr_fh, com_fh);
         if(result == 'w'){
-		    printf("user win\n");
+		    readFile("win.txt");
 		    win++;
 	    }
 	    if(result == 'l'){
-	    	printf("user lose\n");			
+	    	readFile("lose.txt");			
             lose++;
 	    }
 	    if(result == 't'){
-	    	printf("tie\n");
+	    	readFile("tie.txt");
 	        tie++;
 	    }
         printf("Continue? (y/n) >> ");
