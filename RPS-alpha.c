@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <math.h>
 #include <time.h>
+#include <conio.h>
 
 char comhand();
 char compare(char player, char computer);
