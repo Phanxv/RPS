@@ -3,6 +3,7 @@
 #include <math.h>
 #include <time.h>
 #include <conio.h>
+#include <string.h>
 
 char comhand();
 char compare(char player, char computer);
@@ -11,6 +12,9 @@ void mainMenu(char name[]);
 void exit(int status);
 void writeStat(char name[],int win, int lose, int tie);
 void readFile(char *FileName);
+int readQuiz(int item_num);
+char check(int item_num, char *ans);
+char quiz(int item_num);
 
 int main(){
 	char name[50];
@@ -70,6 +74,7 @@ void mainMenu(char name[]){
 
 int play(char name[]){
 	char usr_l, usr_r, usr_fd, usr_fh,com_fh, result, cont='y';
+    char answ[50];
     int tie = 0, win = 0, lose = 0, round = 1;
     do{
         printf("\n\n********************ROUND %d********************\n\n",round);
@@ -124,8 +129,14 @@ int play(char name[]){
 	        tie++;
 	    }
         printf("Continue? (y/n) >> ");
-        round++;
 		scanf(" %c",&cont);
+        if(lose%3==0 && lose!=0){
+            readQuiz(lose/3);
+            printf("\n\nAnswer >> ");
+            scanf("%s",&answ);
+            cont = check(lose/3,answ);
+        }
+        round++;
     }while(cont == 'y' || cont == 'Y');
     writeStat(name,win,lose,tie);
 }
@@ -336,4 +347,20 @@ void readFile(char *FileName){
 	while(fgets(line, sizeof(line), fp)){
 		printf("%s",line);
 	}
+}
+
+int readQuiz(int item_num){
+    char item[10];
+    sprintf(item,"Quiz %d.txt",item_num);
+    readFile(item);
+}
+
+char check(int item_num, char *ans){
+    char *ans_arr[] = {"d","69x^2 + 420x","a","d","b"};
+    if(strcmp(ans,ans_arr[item_num-1])==0){
+        return 'y';
+    }
+    else{
+        return 'n';
+    }
 }

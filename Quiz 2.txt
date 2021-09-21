@@ -1,0 +1,2 @@
+What is the derivative of 23x^3 + 210x^2 - 69. 
+(Answer in all lowercases)

@@ -18,3 +18,13 @@ Username : test | Summary win : 2 | lose : 1 | tie : 0 | Wed Sep 08 18:28:06 202
  
 Username : test | Summary win : 0 | lose : 1 | tie : 0 | Wed Sep 08 18:28:26 2021
  
+Username : Etao | Summary win : 1 | lose : 0 | tie : 0 | Sun Sep 19 21:38:52 2021
+ 
+Username : test | Summary win : 3 | lose : 3 | tie : 0 | Tue Sep 21 13:10:40 2021
+ 
+Username : test | Summary win : 3 | lose : 3 | tie : 2 | Tue Sep 21 13:31:50 2021
+ 
+Username : test | Summary win : 0 | lose : 4 | tie : 0 | Tue Sep 21 13:37:14 2021
+ 
+Username : test | Summary win : 4 | lose : 3 | tie : 3 | Tue Sep 21 13:38:20 2021
+ 
