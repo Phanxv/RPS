@@ -77,6 +77,7 @@ int play(char name[]){
     char answ[50];
     int tie = 0, win = 0, lose = 0, round = 1;
     do{
+        system("cls");
         printf("\n\n********************ROUND %d********************\n\n",round);
         printf("user left hand (r,p,s)>> ");
         scanf(" %c",&usr_l);
@@ -92,20 +93,27 @@ int play(char name[]){
             printf("user right hand (r,p,s)>> ");
             scanf(" %c",&usr_r);
         }
-        printf("user's left hand : ");
+        printf("\nuser's left hand : \n");
         if(usr_l == 'r')
-            printf("rock\n");
+            //printf("rock\n");
+            readFile("rock.txt");
         if(usr_l == 'p')
-            printf("paper\n");
+           // printf("paper\n");
+            readFile("paper.txt");
         if(usr_l == 's')
-            printf("scissor\n");
-        printf("user's right hand : ");
+            //printf("scissor\n");
+            readFile("scissor.txt");
+        printf("\n\n\nuser's right hand : \n");
         if(usr_r == 'r')
-            printf("rock\n");
+           // printf("rock\n");
+            readFile("rock.txt");
         if(usr_r == 'p')
-            printf("paper\n");
+            //printf("paper\n");
+            readFile("paper.txt");
         if(usr_r == 's')
-            printf("scissor\n");
+           // printf("scissor\n");
+            readFile("scissor.txt");
+        printf("\n\n");
         com_fh = comhand();
         printf("user final decision (%c,%c)>> ",usr_l,usr_r);
         scanf(" %c",&usr_fd);
@@ -117,20 +125,20 @@ int play(char name[]){
         usr_fh = usr_fd;
         result = compare(usr_fh, com_fh);
         if(result == 'w'){
-		    readFile("lose.txt");
-		    lose++;
+		    readFile("win.txt");
+		    win++;
 	    }
 	    if(result == 'l'){
 	    	readFile("lose.txt");			
             lose++;
 	    }
 	    if(result == 't'){
-	    	readFile("lose.txt");
-	        lose++;
+	    	readFile("tie.txt");
+	        tie++;
 	    }
         printf("Continue? (y/n) >> ");
 		scanf(" %c",&cont);
-        if(lose%3==0 && lose!=0){
+        if(lose%3==0 && lose!=0 && cont == 'y'){
             readFile("Quiztime.txt");
             getch();
             readQuiz(lose/3);
@@ -159,11 +167,14 @@ char comhand() {
 
             if (com_Left==1) {
                     printf("computer's hand : rock\n");
-
+                    readFile("rock.txt");
+                    printf("\n\n");
                         srand(time(NULL));
                         com_Right = 1 + rand()%2 ;
                         if(com_Right==1){
                             printf("computer's hand : paper\n");
+                            readFile("paper.txt");
+                            printf("\n\n");
                             com_Hfinal = 1 + rand()%2 ;
                             switch(com_Hfinal)  {
                                 case 1:
@@ -180,7 +191,8 @@ char comhand() {
                         if(com_Right==2){
                             3 == com_Right;
                             printf("computer's hand : scissor\n");
-
+                            readFile("scissor.txt");
+                            printf("\n\n");
                             com_Hfinal = 1 + rand()%2 ;
                             switch(com_Hfinal)  {
                                 case 1:
@@ -198,12 +210,14 @@ char comhand() {
 
             if (com_Left==2) {
                     printf("computer's hand : paper\n");
-
+                    readFile("paper.txt");
+                    printf("\n\n");
                         srand(time(NULL));
                         com_Right = 1 + rand()%2 ;
                         if(com_Right==1){
                             printf("computer's hand : rock\n");
-
+                            readFile("rock.txt");
+                            printf("\n\n");
                             com_Hfinal = 1 + rand()%2 ;
                             switch(com_Hfinal)  {
                                 case 1:
@@ -219,7 +233,8 @@ char comhand() {
                         if(com_Right==2){
                             3 == com_Right;
                             printf("computer's hand : scissor\n");
-
+                            readFile("scissor.txt");
+                            printf("\n\n");
                             com_Hfinal = 1 + rand()%2 ;
                             switch(com_Hfinal)  {
                                 case 1:
@@ -237,14 +252,15 @@ char comhand() {
 
             if (com_Left==3) {
                 printf("computer's hand : scissor\n");
-
-
+                readFile("scissor.txt");
+                printf("\n\n");
                     srand(time(NULL));
                     com_Right = 1 + rand()%2 ;
 
                         if(com_Right==1){
                             printf("computer's hand : rock\n");
-
+                            readFile("rock.txt");
+                            printf("\n\n");
                             com_Hfinal = 1 + rand()%2 ;
                             switch(com_Hfinal)  {
                                 case 1:
@@ -260,7 +276,8 @@ char comhand() {
                         }
                         if(com_Right==2){
                             printf("computer's hand : paper\n");
-
+                            readFile("paper.txt");
+                            printf("\n\n");
                             com_Hfinal = 1 + rand()%2 ;
                             switch(com_Hfinal)  {
                                 case 1:
@@ -281,46 +298,58 @@ char compare(char player, char computer){
 	switch(player){
 		case 'r' :
 			printf("user's final hand : rock\n");
+            readFile("rock.txt");
 			if(computer == 'r'){
 				printf("computer's final hand : rock\n");
+                readFile("rock.txt");
 				return 't';
 			}
 			else if(computer == 'p'){
 				printf("computer's final hand : paper\n");
+                readFile("paper.txt");
 				return 'l';
 			}
 			else if(computer == 's'){
 				printf("computer's final hand : scissor\n");
+                readFile("scissor.txt");
 				return 'w';
 			}	
 			break;
 		case 'p':
 			printf("user's final hand : paper\n");
+            readFile("paper.txt");
 			if(computer == 'p'){
 				printf("computer's final hand : paper\n");
+                readFile("paper.txt");
 				return 't';
 			}
 			else if(computer == 's'){
 				printf("computer's final hand : scissor\n");
+                readFile("scissor.txt");
 				return 'l';
 			}
 			else if(computer == 'r'){
 				printf("computer's final hand : rock\n");
+                readFile("rock.txt");
 				return 'w';
 			}
 			break;
 		case 's':
 			printf("user's final hand : scissor\n");
+            readFile("scissor.txt");
 			if(computer == 's'){
 				printf("computer's final hand : scissor\n");
+                readFile("scissor.txt");
 				return 't';
 			}
 			else if(computer == 'r'){
 				printf("computer's final hand : rock\n");
+                readFile("rock.txt");
 				return 'l';
 			}
 			else if(computer == 'p'){
 				printf("computer's final hand : paper\n");
+                readFile("paper.txt");
 				return 'w';
 			}
 			break;

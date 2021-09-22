@@ -16,3 +16,7 @@ Username : test | Summary win : 0 | lose : 6 | tie : 0 | Wed Sep 22 11:46:38 202
  
 Username : test | Summary win : 0 | lose : 12 | tie : 0 | Wed Sep 22 11:49:32 2021
  
+Username : test | Summary win : 0 | lose : 1 | tie : 0 | Wed Sep 22 12:52:15 2021
+ 
+Username : test | Summary win : 0 | lose : 0 | tie : 1 | Wed Sep 22 12:58:43 2021
+ 
