@@ -12,7 +12,7 @@ char quiz(int item_num);
 
 int main(){
     int i,round=1,quizNum=0;
-    while (round <= 15)
+    while (round <= 32)
     {
         printf("Round %d\n",round);
         getch();
@@ -42,7 +42,7 @@ int readQuiz(int item_num){
 }
 
 char check(int item_num, char *ans){
-    char *ans_arr[] = {"d","69x^2 + 420x","a","d","b"};
+    char *ans_arr[] = {"d","c","Wednesday","shi","love","c","8","69x^2 + 420x","d","b"};
     if(strcmp(ans,ans_arr[item_num-1])==0){
         return 'y';
     }

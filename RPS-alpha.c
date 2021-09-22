@@ -117,27 +117,30 @@ int play(char name[]){
         usr_fh = usr_fd;
         result = compare(usr_fh, com_fh);
         if(result == 'w'){
-		    readFile("win.txt");
-		    win++;
+		    readFile("lose.txt");
+		    lose++;
 	    }
 	    if(result == 'l'){
 	    	readFile("lose.txt");			
             lose++;
 	    }
 	    if(result == 't'){
-	    	readFile("tie.txt");
-	        tie++;
+	    	readFile("lose.txt");
+	        lose++;
 	    }
         printf("Continue? (y/n) >> ");
 		scanf(" %c",&cont);
         if(lose%3==0 && lose!=0){
+            readFile("Quiztime.txt");
+            getch();
             readQuiz(lose/3);
             printf("\n\nAnswer >> ");
             scanf("%s",&answ);
             cont = check(lose/3,answ);
         }
         round++;
-    }while(cont == 'y' || cont == 'Y');
+    }while((cont == 'y' || cont == 'Y')&&round<=32);
+    readFile("GameOver.txt");
     writeStat(name,win,lose,tie);
 }
 
@@ -356,7 +359,7 @@ int readQuiz(int item_num){
 }
 
 char check(int item_num, char *ans){
-    char *ans_arr[] = {"d","69x^2 + 420x","a","d","b"};
+    char *ans_arr[] = {"d","c","Wednesday","shi","love","c","8","69x^2 + 420x","d","b"};
     if(strcmp(ans,ans_arr[item_num-1])==0){
         return 'y';
     }

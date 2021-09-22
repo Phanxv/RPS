@@ -1,2 +1,20 @@
-What is the derivative of 23x^3 + 210x^2 - 69. 
-(Answer in all lowercases)
+What version of Trusted Platform Module (TPM) your PC need to have
+in order to be able to install and use windows 11.
+                          _______
+                         | ___  o|	
+                         |[_-_]_ |	a.) TPM version 1.0
+      ______________     |[_____]|	b.) TPM version 1.5
+     |.------------.|    |[_____]|	c.) TPM version 2.0
+     ||            ||    |[====o]|	d.) TPM version 2.1
+     ||            ||    |[_.--_]|	e.) TPM version 6.9
+     ||            ||    |[_____]|
+     ||            ||    |      :|
+     ||____________||    |      :|
+ .==.|""  ......    |.==.|      :|
+ |::| '-.________.-' |::||      :|
+ |''|  (__________)-.|''||______:|
+ `""`_.............._\""`______
+    /:::::::::::'':::\`;'-.-.  `\
+   /::=========.:.-::"\ \ \--\   \
+   \`""""""""""""""""`/  \ \__)   \
+    `""""""""""""""""`    '========'
