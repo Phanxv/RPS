@@ -53,9 +53,9 @@ void TwoPlayer(){
 void play2(char name1[],char name2[]){
     srand(time(NULL));
     char P1,P2,COM;
-    printf("\nEnter %s's hand >> ",name1);
+    printf("\n\nEnter %s's hand >> ",name1);
     scanf(" %c",&P1);
-    printf("\nEnter %s's hand >> ",name2);
+    printf("Enter %s's hand >> ",name2);
     scanf(" %c",&P2);
     COM = comHand2(P1,P2);
     printf("\nComputer's hand : %c\n",COM);
@@ -94,7 +94,7 @@ char comHand2(char P1,char P2){
     }
 }
 
-void compare(char P1, char P2, char COM, char P1N[], char P2N[]){
+void compare2(char P1, char P2, char COM, char P1N[], char P2N[]){
     if(P1==P2){
         if(P1=='r'){
             if(COM == 'r'){

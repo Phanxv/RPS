@@ -1,0 +1,12 @@
+Test1 win : 1 | Test2 lose : 0 | Computer win : 0 | Thu Sep 23 17:10:59 2021
+ 
+Test1 win : 1 | Test2 lose : 0 | Computer win : 1 | Thu Sep 23 17:11:15 2021
+ 
+test1 win : 0 | test2 lose : 0 | Computer win : 0 | Thu Sep 23 17:32:41 2021
+ 
+Test1 win : 2 | Test2 lose : 1 | Computer win : 3 | Thu Sep 23 18:51:02 2021
+ 
+test1 win : 1 | test lose : 0 | Computer win : 0 | Thu Sep 23 18:54:56 2021
+ 
+P1 win : 1 | P2 lose : 0 | Computer win : 1 | Thu Sep 23 18:55:25 2021
+ 
