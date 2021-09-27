@@ -1,0 +1,21 @@
+
+ ______        __               _          __
+/_  __/ __ __ / /_ ___   ____  (_) ___ _  / /
+ / /   / // // __// _ \ / __/ / / / _ `/ / / 
+/_/    \_,_/ \__/ \___//_/   /_/  \_,_/ /_/  
+                                             
+
+For two-player
+1. Player one choose one of three tools below
+      R for Rock
+      P for Paper
+      S for Scissors
+2. Player two also pick one tool of three 
+      R for Rock
+      P for Paper
+      S for Scissors
+3. Let's see computer's choice and the result who will be the winner YOU, YOUR FRIEND, COMPUTER or ALL TIE.
+
+REMEMBER 'Rock crushes scissors, scissors cut paper, and paper covers rock.' 
+..............................................................................
+GOOD LUCK HAVE FUN  :)

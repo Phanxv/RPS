@@ -10,3 +10,19 @@ test1 win : 1 | test lose : 0 | Computer win : 0 | Thu Sep 23 18:54:56 2021
  
 P1 win : 1 | P2 lose : 0 | Computer win : 1 | Thu Sep 23 18:55:25 2021
  
+etao win : 2 | mawkhao lose : 0 | Computer win : 2 | Sat Sep 25 15:32:36 2021
+ 
+etao win : 1 | ww lose : 0 | Computer win : 1 | Sat Sep 25 15:33:08 2021
+ 
+etao win : 3 | ww lose : 1 | Computer win : 4 | Sat Sep 25 15:33:36 2021
+ 
+test win : 1 | test lose : 0 | Computer win : 1 | Sat Sep 25 17:32:48 2021
+ 
+Etao win : 2 | MawKhao lose : 2 | Computer win : 1 | Sun Sep 26 18:49:42 2021
+ 
+etao win : 3 | mawkao lose : 0 | Computer win : 3 | Sun Sep 26 18:53:30 2021
+ 
+usr1 win : 1 | usr2 lose : 0 | Computer win : 1 | Sun Sep 26 20:43:25 2021
+ 
+usr1 win : 1 | usr2 lose : 0 | Computer win : 1 | Sun Sep 26 20:44:23 2021
+ 

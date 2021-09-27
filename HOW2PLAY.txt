@@ -1,17 +1,20 @@
-How to play
-For 1 player
-1. Pick up one of three tools below for your left hand (lowercase only).
-r for Rock
-p for Paper
-s for Scissors
+
+ __  __        __               _          __
+/_  __/ __ __ / /_ ___   ____  (_) ___ _  / /
+ / /   / // // __// _ \ / __/ / / / _ `/ / / 
+/_/    \_,_/ \__/ \___//_/   /_/  \_,_/ /_/  
+                                             
+
+Single player
+1. Pick up one of three tools below for your left hand
+     R for Rock
+     P for Paper
+     S for Scissors
 2. Pick another one for your right hand (you can pick the same tool if you want)
 3. See two tools which are on computer's hands
 4. Choose the last tool which is on your left or right hand
-//Remember 'Rock crushes scissors, scissors cut paper and paper covers rock.'//
-Let's see whos gonna win!!
-................................
-For player who wins all rounds >> Congratulations you are GOD your high scores will be recorded
-For player who loses 3 times >> We offer you a last chance before 'GAME OVER' by answering one easy quiz correctly to 
-continue the game But do remember you can only lose 32 times before 'GAME OVER'
 
-GOOD LUCK HAVE FUN :)
+REMEMBER 'Rock crushes scissors, scissors cut paper, and paper covers rock.' 
+Let's see whos gonna win!!
+...............................................................................
+GOOD LUCK HAVE FUN  :)

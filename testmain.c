@@ -6,7 +6,7 @@
 #include <string.h>
 
 char comhand();
-char compare(char player, char computer);
+char compare(char *player, char computer);
 int play();
 void mainMenu(char name[]);
 void exit(int status);
@@ -22,7 +22,7 @@ char comHand2(char P1,char P2);
 void writeStat2(char name1[], char name2[], int P1W, int P2W, int CW);
 
 int main(){
-    char mode;
+    char mode[2];
     char name[50];
     char name1[50],name2[50];
     system("cls");
@@ -30,31 +30,34 @@ int main(){
     printf("\n\n\t1. Single Player VS Computer\n");
     printf("\n\t2. 2 Player VS computer\n");
     printf("\nMode >> ");
-    scanf(" %c",&mode);
-    switch(mode){
-        case '1' :
-            system("cls");
-            printf("\n\nPlease Enter your name ( <50 characters ) : ");
-            scanf("%s",name);
-            mainMenu(name);
-            break;
-        case '2' :
-            system("cls");
-            char name1[50],name2[50];
-            printf("\n\nEnter Player 1's name : ");
-            scanf("%s",name1);
-            printf("Enter Player 2's name : ");
-            scanf("%s",name2);
-            mainMenu2(name1,name2);
-            break;
-        default :
-            printf("Error");
-            break;
+    gets(mode);
+    while (strcmp(mode,"1") != 0 && strcmp(mode,"2") != 0)
+    {
+        printf("Invalid input (input 1 or 2)");
+        printf("\nMode >> ");
+        gets(mode);
     }
-}
+    if (strcmp(mode,"1") == 0)
+            {
+                system("cls");
+                printf("\n\nPlease Enter your name ( <50 characters ) : ");
+                gets(name);
+                mainMenu(name);
+            }
+        else if (strcmp(mode,"2") == 0)
+            {
+                system("cls");
+                char name1[50],name2[50];
+                printf("\n\nEnter Player 1's name : ");
+                scanf("%s",name1);
+                printf("Enter Player 2's name : ");
+                scanf("%s",name2);
+                mainMenu2(name1,name2);
+            }
+    }
 
 void mainMenu(char name[]){
-    char menu;
+    int menu;
     system("cls");
 	readFile("logo.txt");
     readFile("SinglePlayer.txt");
@@ -64,28 +67,28 @@ void mainMenu(char name[]){
 	printf("3. Statatistic\n");
 	printf("4. Log out & Exit\n\n");
 	printf("Select Menu >> ");
-	scanf(" %c",&menu);
-	while(menu != '1' && menu != '2' && menu != '3' && menu != '4'){
+	scanf("%d",&menu);
+	while(menu < 1 || menu > 4){
 		printf("Invalid input\n");
         printf("Select Menu >> ");
-	    scanf(" %c",&menu);
+	    scanf("%d",&menu);
 	}
 	switch(menu){
-		case '1':
+		case 1:
             system("cls");
 			play(name);
 			getch();
 			//menu = 0;
 			mainMenu(name);
 			break;
-		case '2':
+		case 2:
             system("cls");
 			readFile("HOW2PLAY.txt");
 			getch();
 			//menu = 0;
 			mainMenu(name);
 			break;
-		case '3':
+		case 3:
             system("cls");
 			//menu = 0;
 			printf("\n");
@@ -95,7 +98,7 @@ void mainMenu(char name[]){
 			getch();
 			mainMenu(name);
 			break;
-		case '4':
+		case 4:
 			printf("Farewell, %s!",name);
 			getch();
 			exit(0);
@@ -153,63 +156,88 @@ void mainMenu2(char name1[],char name2[]){
 }
 
 int play(char name[]){
-	char usr_l, usr_r, usr_fd, usr_fh,com_fh, result, cont='y';
+	char usr_l[2], usr_r[2], usr_fd[2], usr_fh[2],com_fh, result, cont='y';
     char answ[50];
     int tie = 0, win = 0, lose = 0, round = 1;
     do{
         system("cls");
         printf("\n\n********************ROUND %d********************\n\n",round);
-        printf("user left hand (r,p,s)>> ");
-        scanf(" %c",&usr_l);
-        while(usr_l != 'r' && usr_l != 'p' && usr_l != 's'){
-            printf("Invalid Input ( r for rock, p for paper, s for scissor )\n");
-            printf("user left hand (r,p,s)>> ");
-            scanf(" %c",&usr_l);
-        }
-        printf("user right hand (r,p,s)>> ");
-        scanf(" %c",&usr_r);
-        while(usr_r != 'r' && usr_r != 'p' && usr_r != 's'){
-            printf("Invalid Input ( r for rock, p for paper, s for scissor )\n");
-            printf("user right hand (r,p,s)>> ");
-            scanf(" %c",&usr_r);
-        }
+
+        //printf("\nuser left hand (r,p,s)>> ");
+        //scanf(" %s", usr_l);
+        do {
+            printf("\nuser left hand (r,p,s)>> ");
+            scanf("%s", usr_l);
+            if (strcmp(usr_l,"r") == 0 || strcmp(usr_l,"p") == 0 || strcmp(usr_l,"s") == 0
+                || strcmp(usr_l,"R") == 0|| strcmp(usr_l,"P") == 0|| strcmp(usr_l,"S") == 0)
+            {
+                break;
+            }
+            else
+            {
+                printf("Invalid Input ( r for rock, p for paper, s for scissor )\n");
+            }
+        } while ( (strcmp(usr_l,"r") != 0 && strcmp(usr_l,"p") != 0 && strcmp(usr_l,"s") != 0 )
+               || ( strcmp(usr_l,"R") != 0&& strcmp(usr_l,"P") != 0&& strcmp(usr_l,"S") != 0));
+
+
+        //printf("\nuser right hand (r,p,s)>> ");
+        //scanf("%s",usr_r);
+
+        do {
+            printf("\nuser right hand (r,p,s)>> ");
+            scanf("%s", usr_r);
+            if (strcmp(usr_r,"r") == 0 || strcmp(usr_r,"p") == 0 || strcmp(usr_r,"s") == 0
+                || strcmp(usr_r,"R") == 0|| strcmp(usr_r,"P") == 0|| strcmp(usr_r,"S") == 0)
+            {
+                break;
+            }
+            else
+            {
+                printf("Invalid Input ( r for rock, p for paper, s for scissor )\n");
+            }
+        } while ( (strcmp(usr_r,"r") != 0 && strcmp(usr_r,"p") != 0 && strcmp(usr_r,"s") != 0 )
+               || ( strcmp(usr_r,"R") != 0&& strcmp(usr_r,"P") != 0&& strcmp(usr_r,"S") != 0));
+
         printf("\nuser's left hand : \n");
-        if(usr_l == 'r')
+        if(strcmp(usr_l,"r")==0)
             //printf("rock\n");
             readFile("rock.txt");
-        if(usr_l == 'p')
+        if(strcmp(usr_l,"p")==0)
            // printf("paper\n");
             readFile("paper.txt");
-        if(usr_l == 's')
+        if(strcmp(usr_l,"s")==0)
             //printf("scissor\n");
             readFile("scissor.txt");
+
         printf("\n\n\nuser's right hand : \n");
-        if(usr_r == 'r')
+        if(strcmp(usr_r,"r")==0)
            // printf("rock\n");
             readFile("rock.txt");
-        if(usr_r == 'p')
+        if(strcmp(usr_r,"p")==0)
             //printf("paper\n");
             readFile("paper.txt");
-        if(usr_r == 's')
+        if(strcmp(usr_r,"s")==0)
            // printf("scissor\n");
             readFile("scissor.txt");
         printf("\n\n");
         com_fh = comhand();
-        printf("user final decision (%c,%c)>> ",usr_l,usr_r);
-        scanf(" %c",&usr_fd);
-        while(usr_fd != usr_l && usr_fd != usr_r){
-        printf("Invalid input (please choose what is on your left hand or your right hand)\n");
-        printf("user final decision >> ");
-        scanf(" %c",&usr_fd);
+        printf("user final decision (%s,%s) >> ",usr_l,usr_r);
+        gets(usr_fd);
+        while(strcmp(usr_fd,usr_l) != 0 && strcmp(usr_fd,usr_r) != 0)
+        {
+            printf("Invalid input (please choose what is on your left hand or your right hand)\n");
+            printf("user final decision >> ");
+            gets(usr_fd);
         }
-        usr_fh = usr_fd;
+        strcpy(usr_fh,usr_fd);
         result = compare(usr_fh, com_fh);
         if(result == 'w'){
 		    readFile("win.txt");
 		    win++;
 	    }
 	    if(result == 'l'){
-	    	readFile("lose.txt");			
+	    	readFile("lose.txt");
             lose++;
 	    }
 	    if(result == 't'){
@@ -462,47 +490,55 @@ char comHand2(char P1,char P2){
     }
 }
 
-char compare(char player, char computer){
-	switch(player){
-		case 'r' :
+char compare(char *player, char computer){
+	if ( strcmp(player,"r")==0 || strcmp(player,"R")==0 )  //ใส่ดอกมั้ยนะ?????????????????????????????????
+	{
 			printf("user's final hand : rock\n");
             readFile("rock.txt");
-			if(computer == 'r'){
+			if(computer == 'r')
+            {
 				printf("computer's final hand : rock\n");
                 readFile("rock.txt");
 				return 't';
 			}
-			else if(computer == 'p'){
+			else if(computer == 'p')
+            {
 				printf("computer's final hand : paper\n");
                 readFile("paper.txt");
 				return 'l';
 			}
-			else if(computer == 's'){
+			else if(computer == 's')
+            {
 				printf("computer's final hand : scissor\n");
                 readFile("scissor.txt");
 				return 'w';
-			}	
-			break;
-		case 'p':
+			}
+	}
+    if  ( strcmp(player,"p")==0 || strcmp(player,"P")==0 )
+    {
 			printf("user's final hand : paper\n");
             readFile("paper.txt");
-			if(computer == 'p'){
+			if(computer == 'p')
+            {
 				printf("computer's final hand : paper\n");
                 readFile("paper.txt");
 				return 't';
 			}
-			else if(computer == 's'){
+			else if(computer == 's')
+            {
 				printf("computer's final hand : scissor\n");
                 readFile("scissor.txt");
 				return 'l';
 			}
-			else if(computer == 'r'){
+			else if(computer == 'r')
+			{
 				printf("computer's final hand : rock\n");
                 readFile("rock.txt");
 				return 'w';
 			}
-			break;
-		case 's':
+	}
+	if  ( strcmp(player,"s")==0 || strcmp(player,"S")==0 )
+	{
 			printf("user's final hand : scissor\n");
             readFile("scissor.txt");
 			if(computer == 's'){
@@ -520,10 +556,6 @@ char compare(char player, char computer){
                 readFile("paper.txt");
 				return 'w';
 			}
-			break;
-		default :
-			printf("Invalid input");
-			break;
 	}
 }
 

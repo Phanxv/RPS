@@ -1,9 +1,0 @@
-According to Heisenberg's uncertainty principle, There are two physical qualities of quantum
-particle that we will not be able to predict from the initial condition of particle. 
-
-What are those two qualities?
-
-	a.) mass and velocity
-	b.) position and momentum
-	c.) position and wave function
-	d.) acceleration and momentum

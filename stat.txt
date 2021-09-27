@@ -22,3 +22,21 @@ Username : test | Summary win : 0 | lose : 0 | tie : 1 | Wed Sep 22 12:58:43 202
  
 Username : phanxv | Summary win : 1 | lose : 0 | tie : 0 | Wed Sep 22 17:15:46 2021
  
+Username : etao | Summary win : 0 | lose : 0 | tie : 0 | Fri Sep 24 21:30:45 2021
+ 
+Username : etao | Summary win : 1 | lose : 0 | tie : 0 | Fri Sep 24 21:30:56 2021
+ 
+Username : Etao | Summary win : 2 | lose : 0 | tie : 4 | Fri Sep 24 21:43:25 2021
+ 
+Username : Etao | Summary win : 0 | lose : 1 | tie : 0 | Sat Sep 25 15:31:14 2021
+ 
+Username : test | Summary win : 0 | lose : 1 | tie : 0 | Sat Sep 25 17:23:12 2021
+ 
+Username : test | Summary win : 0 | lose : 0 | tie : 1 | Sat Sep 25 17:24:44 2021
+ 
+Username : Etao | Summary win : 0 | lose : 1 | tie : 0 | Sun Sep 26 20:34:29 2021
+ 
+Username : test | Summary win : 3 | lose : 3 | tie : 1 | Sun Sep 26 20:42:07 2021
+ 
+Username : Phanxv | Summary win : 0 | lose : 1 | tie : 0 | Mon Sep 27 21:11:13 2021
+ 
