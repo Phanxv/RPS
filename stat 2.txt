@@ -26,3 +26,5 @@ usr1 win : 1 | usr2 lose : 0 | Computer win : 1 | Sun Sep 26 20:43:25 2021
  
 usr1 win : 1 | usr2 lose : 0 | Computer win : 1 | Sun Sep 26 20:44:23 2021
  
+Teacher win : 1 | Phankawee lose : 2 | Computer win : 0 | Tue Sep 28 20:37:37 2021
+ 
