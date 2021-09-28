@@ -369,6 +369,7 @@ void play2(char name1[],char name2[])
         printf("\n  Computer's hand : %s\n\n",COM);
 
         WHOW = compare2(P1,P2,COM,name1,name2);
+        //A = P1 win, B = P2 win, C = Com win, D = P1&P2 win, F = P1&Com win, G = P2&Com win 
         if(WHOW=='A')
             {
                 P1W++;
@@ -450,7 +451,6 @@ char comhand()
 
                         if(com_Right==2)
                         {
-                            3 == com_Right;
                             printf("and scissor\n");
                             //readFile("scissor.txt");
                             //printf("\n\n");
@@ -493,7 +493,6 @@ char comhand()
                             }
                         }
                         if(com_Right==2){
-                            3 == com_Right;
                             printf("and scissor\n");
                             //readFile("scissor.txt");
                             //printf("\n\n");
@@ -954,4 +953,5 @@ void readFile(char *FileName)
         {
 		printf("%s",line);
         }
+    fclose(fp);
 }
